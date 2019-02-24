@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-    <header>
+    <header class="header">
         <ul class="header__menu">
             <li class="header__list-item header__list-item--selected">
                 <a class="header__link header__link--selected" href="./index.html">Home</a>
@@ -29,7 +29,7 @@
         </form>
     </header>
     
-    <main>
+    <main class="main">
         <div class="main__head">
             <div class="main__logo"></div>
             <div class="main__description">
@@ -89,23 +89,25 @@
                         <div class="body__shows-title">ALBUM</div>
                     </li>
                     <li class="body__shows body__shows--image">
-                        <img class="body__album-icon" src="images/morda.png" alt="">
+                        <img class="body__album-icon" alt="">
                         <div class="body__album-info">Latest Album 2012 - Mp3, WAV, TIFF</div>
                     </li>
                 </ul>
                 <div class="body__list">
                     <li class="body__shows body__shows--main">
                         <div class="body__shows-title">SOCIAL</div>
-                        <img src="./images/icon_googleplus.png" class="body__sociallink" id="social-googleplus"/>
-                        <img src="./images/icon_facebook.png" class="body__sociallink" id="social-facebook"/>
-                        <img src="./images/icon_twitter.png" class="body__sociallink" id="social-twitter"/>
+                        <div class="body__sociallink">
+                            <img src="./images/icon_twitter.png" class="body__sociallink--icon" id="social-twitter"/>
+                            <img src="./images/icon_facebook.png" class="body__sociallink--icon" id="social-facebook"/>
+                            <img src="./images/icon_googleplus.png" class="body__sociallink--icon" id="social-googleplus"/>
+                        </div>
                     </li>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__content">
 			&copy;&nbsp;Copyright &copy; 2011 .Company name all rights reserved
 		</div>

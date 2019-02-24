@@ -1,4 +1,3 @@
-
 body {
     background: #000 url(./images/space.jpg) no-repeat top center;
     background-size: 1200px;
@@ -11,29 +10,30 @@ a {
     color: inherit;
 }
 
-header {
+.header {
     width: 965px;
     margin: 0 auto;
     min-height: 140px;
     max-height: fit-content;
     overflow: hidden;
     padding: 48px 0 0 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .header__menu {
     display: inline-block;
-    float: left;
     margin: 0;
     padding: 0;
 }
 
 .header__list-item {
-    float: left;
+    display: inline-block;
     list-style: none;
     margin: 0 13px 0 0;
     padding: 0;
     width: 124px;
-    height: 34px;   
+    height: 34px;
     cursor: pointer;
     text-align: center;
 }
@@ -58,15 +58,13 @@ header {
 }
 
 .header__login {
-    display: inline-block;
-    float: right;
     margin: 0;
     padding: 0;
 }
 
 .header__email {
     padding: 0;
-    height: 33px;    
+    height: 33px;
     width: 132px;
     position: relative;
     left: 0;
@@ -106,11 +104,7 @@ header {
     border-top: solid 2px #7d7;
 }
 
-
-/* ----- Main block ----- */
-
-
-main {
+.main {
     width: 965px;
     margin: 0 auto;
 }
@@ -160,7 +154,7 @@ main {
     background: linear-gradient(to bottom, #44f, #4433aa, #111188);
     color: #eeeeee;
     text-shadow: 0 2px 3px #111166, 0 0 2px #ffffff;
-    font-family: 'consolas';
+    font-family: "consolas";
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -205,8 +199,9 @@ main {
 
 .main__text-author {
     font-style: normal;
-    float: right;
-    margin: 40px 0;
+    position: relative;
+    width: inherit;
+    text-align: right;
 }
 
 .main__body {
@@ -215,20 +210,16 @@ main {
     max-width: 880px;
     margin-left: 40px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
-
-
-/* ----- Body block ----- */
-
 
 .body__content {
     width: 500px;
-    float: left;
 }
 
 .body__side-bar {
     width: 340px;
-    float: right;
 }
 
 .body__video {
@@ -258,7 +249,7 @@ main {
     height: auto;
     margin: 12px 0 0 0;
     list-style: none;
-    padding: 0 0 0 14px;    
+    padding: 0 0 0 14px;
     font-size: 14px;
     background: #213;
     color: #568;
@@ -282,13 +273,15 @@ main {
     margin: 0;
     background: #767;
     color: #eee;
-    font-family: 'NixieOne-Regular';
+    font-family: "NixieOne-Regular";
     font-style: italic;
     font-weight: normal !important;
     font-size: 25px;
     letter-spacing: 0.2em;
     line-height: 48px;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
 }
 
 .body__shows--image {
@@ -306,6 +299,10 @@ main {
     margin: 14px auto;
     border: 3px solid #eee;
     border-radius: 4px;
+    background: url(images/morda.png);
+    width: 160px;
+    height: 160px;
+    background-size: contain;
 }
 
 .body__album-info {
@@ -314,47 +311,39 @@ main {
 
 .body__sociallink {
     display: inline-block;
+}
+
+.body__sociallink--icon {
+    display: inline-block;
     height: 30px;
     width: 30px;
     filter: invert(0.7) drop-shadow(0px 1px 0px #fff);
-    float: right;
-    margin: 8px 20px 0 0;
+    margin: 8px 16px 0 0;
     cursor: pointer;
     user-select: none;
 }
 
-.body__sociallink:hover {
+.body__sociallink--icon:hover {
     filter: invert(0.8);
 }
 
-
-
-/* ----- Footer block ----- */
-
-
-footer {
+.footer {
     margin: 20px 0 150px 0;
     min-width: 600px;
 }
 
 .footer__content {
-	background: #213;
-	margin: 0 auto;
+    background: #213;
+    margin: 0 auto;
     text-align: center;
-	padding: 10px 0px;
+    padding: 10px 0px;
     max-width: 940px;
     min-height: 10px;
     color: #878;
     font-size: 10px;
 }
 
-
-
-/* ----- Media queries ----- */
-
-
-@media all and (max-width:900px)
-{
+@media all and (max-width:900px) {
     body {
         width: 100%;
     }
@@ -366,22 +355,26 @@ footer {
     main {
         width: 600px;
     }
-    
-    .header__manu {
-        float: none;
+
+    .header {
+        display: block;
     }
 
     .header__login {
-        float: none;
         margin: 15px 0;
     }
-
-    .body__content {
-        float: none;
+    
+    .main__body {
+        flex-direction: column;
     }
 
     .body__side-bar {
-        float: none;
-        width: auto;
+        width: 500px;
+    }
+}
+
+@supports (caret-color: red) {
+    .header__email {
+        caret-color: red;
     }
 }

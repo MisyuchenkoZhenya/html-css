@@ -269,9 +269,12 @@ a {
     font-size: 25px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-shadow: 0 0 2px #ddd;
+}
+
+.list-item--icons {    
     display: flex;
     justify-content: space-between;
-    text-shadow: 0 0 2px #ddd;
 }
 
 .list-item--child {
@@ -284,7 +287,7 @@ a {
     margin: 12px 0 0 10px;
 }
 
-.list-item > b {
+.list-item--child > b {
     font-size: 16px;
 }
 
@@ -293,9 +296,7 @@ a {
     padding: 1px 14px;
 }
 
-.body__album-icon {
-    display: block;
-    margin: 14px auto;
+.album-icon {
     border: 3px solid #eee;
     border-radius: 4px;
     background: url(images/morda.png);
@@ -304,26 +305,28 @@ a {
     background-size: contain;
 }
 
-.body__album-info {
-    bottom: 0;
+.list-item__icon {
+    display: block;
+    margin: 14px auto;
+}
+
+.album-info {
     font-size: 14px;
 }
 
-.body__sociallink {
-    display: inline-block;
+.sociallink__icon {
+    margin: 8px 16px 0 0;
 }
 
-.body__sociallink--icon {
-    display: inline-block;
+.social-icon {
     height: 30px;
     width: 30px;
     filter: invert(0.7) drop-shadow(0px 1px 0px #fff);
-    margin: 8px 16px 0 0;
     cursor: pointer;
     user-select: none;
 }
 
-.body__sociallink--icon:hover {
+.social-icon:hover {
     filter: invert(0.8);
 }
 
@@ -342,20 +345,17 @@ a {
 }
 
 @media all and (max-width:900px) {
-    body {
+    .body {
         width: 100%;
     }
 
-    header {
-        width: 600px;
-    }
-
-    main {
-        width: 600px;
-    }
-
     .header {
+        width: 600px;
         display: block;
+    }
+
+    .main {
+        width: 600px;
     }
 
     .header__login {
@@ -366,7 +366,7 @@ a {
         flex-direction: column;
     }
 
-    .body__side-bar {
+    .side-bar {
         width: 500px;
     }
 }

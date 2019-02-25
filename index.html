@@ -9,93 +9,91 @@
 </head>
 <body>
     <header class="header">
-        <ul class="header__menu">
-            <li class="header__list-item header__list-item--selected">
-                <a class="header__link header__link--selected" href="./index.html">Home</a>
+        <ul class="header__navigation navigation">
+            <li class="navigation__button link-button link-button--selected">
+                <a class="link-button__link link-button__link--selected" href="./index.html">Home</a>
             </li>
-            <li class="header__list-item">
-                <a class="header__link" href="./index.html">About</a>
+            <li class="navigation__button link-button">
+                <a class="link-button__link" href="./index.html">About</a>
             </li>
-            <li class="header__list-item">
-                <a class="header__link" href="./index.html">Blog</a>
+            <li class="navigation__button link-button">
+                <a class="link-button__link" href="./index.html">Blog</a>
             </li>
-            <li class="header__list-item">
-                <a class="header__link" href="./index.html">Shows</a>
+            <li class="navigation__button link-button">
+                <a class="link-button__link" href="./index.html">Shows</a>
             </li>
         </ul>
-        <form class="header__login">
-            <input class="header__email" type="email" name="email" placeholder="Enter e-mail address">
-            <input class="header__submit" type="submit" value="Join">
+        <form class="header__login login-form">
+            <input class="login-form__email email-field" type="email" name="email" placeholder="Enter e-mail address">
+            <input class="login-form__submit submit-button" type="submit" value="Join">
         </form>
     </header>
     
     <main class="main">
-        <div class="main__head">
-            <div class="main__logo"></div>
-            <div class="main__description">
+        <div class="main__album-info album-info">
+            <div class="album-info__logo"></div>
+            <div class="album-info__description description-block">
                 <p>
                     This website template has been designed by <a href="./index.html">Free Website Templates</a> for you, for free. You can replace all this text with your own text.
                 </p>
-                <span class="main__download-text">Download Johanne Doe now!</span>
-                <button class="main__download-button">Download</button>
+                <span class="description-block__download-text download-text">Download Johanne Doe now!</span>
+                <button class="description-block__download-button download-button">Download</button>
             </div>
-            <div class="main__quote">
-                    <span class="main__quote-text">
-                        This website template has been designed by <a href="./index.html">Free Website Templates</a> for you, for free. You can replace all this text with your own text.
-                    </span>
-                    <p class="main__text-author">-Free Website Templates</p>
+            <div class="album-info__quote quote-block">
+                <span class="quote-block__text quote-text">
+                    This website template has been designed by <a href="./index.html">Free Website Templates</a> for you, for free. You can replace all this text with your own text.
+                </span>
+                <p class="quote-block__author quote-author">-Free Website Templates</p>
             </div>
         </div>
         
-        <div class="main__body">
-            <div class="body__content">
-                <video class="body__video" poster="/images/video.png" autoplay="autoplay">
+        <div class="main__body body-content">
+            <div class="body-content__content">
+                <video class="body-content__video video-player" poster="/images/video.png" autoplay="autoplay">
                     Your browser does not support the video tag.
                 </video>
-                <div class="body__text">
-                    <p class="body__paragraph">
+                <div class="body-content__text">
+                    <p class="body-content__paragraph">
                         This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismonf.
                     </p>
-                    <p class="body__paragraph">
+                    <p class="body-content__paragraph">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt utUt wisi enim ad minim veniam. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
                     </p>
-                    <p class="body__paragraph">
+                    <p class="body-content__paragraph">
                         Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum
                     </p>
                 </div>
             </div>
-            <div class="body__side-bar">
-                <div>
-                    <ul class="body__list">
-                        <li class="body__shows body__shows--main">
-                            <div class="body__shows-title">SHOWS</div>
-                        </li>
-                        <li class="body__shows body__shows--child">
-                            July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
-                        </li>
-                        <li class="body__shows body__shows--child">
-                            July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
-                        </li>
-                        <li class="body__shows body__shows--child">
-                            July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
-                        </li>
-                        <li class="body__shows body__shows--child">
-                            July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="body__list">
-                    <li class="body__shows body__shows--main">
-                        <div class="body__shows-title">ALBUM</div>
+            <div class="body-content__side-bar side-bar">
+                <ul class="side-bar__list">
+                    <li class="side-bar__item list-item list-item--main">
+                        SHOWS
                     </li>
-                    <li class="body__shows body__shows--image">
+                    <li class="side-bar__item list-item list-item--child">
+                        July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
+                    </li>
+                    <li class="side-bar__item list-item list-item--child">
+                        July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
+                    </li>
+                    <li class="side-bar__item list-item list-item--child">
+                        July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
+                    </li>
+                    <li class="side-bar__item list-item list-item--child">
+                        July 19, 2012&nbsp;&nbsp;-&nbsp;&nbsp;<b>The Wercheshtire, UK 0900</b>
+                    </li>
+                </ul>
+                <ul class="side-bar__list">
+                    <li class="side-bar__item list-item list-item--main">
+                        ALBUM
+                    </li>
+                    <li class="side-bar__item list-item list-item--image">
                         <img class="body__album-icon" alt="">
                         <div class="body__album-info">Latest Album 2012 - Mp3, WAV, TIFF</div>
                     </li>
                 </ul>
-                <div class="body__list">
-                    <li class="body__shows body__shows--main">
-                        <div class="body__shows-title">SOCIAL</div>
+                <div class="side-bar__list">
+                    <li class="side-bar__item list-item list-item--main">
+                        SOCIAL
                         <div class="body__sociallink">
                             <img src="./images/icon_twitter.png" class="body__sociallink--icon" id="social-twitter"/>
                             <img src="./images/icon_facebook.png" class="body__sociallink--icon" id="social-facebook"/>

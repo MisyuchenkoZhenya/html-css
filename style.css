@@ -21,16 +21,19 @@ a {
     justify-content: space-around;
 }
 
-.header__menu {
+.header__navigation {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
 
-.header__list-item {
+.navigation__button {
     display: inline-block;
     list-style: none;
     margin: 0 13px 0 0;
+}
+
+.link-button {
     padding: 0;
     width: 124px;
     height: 34px;
@@ -38,70 +41,64 @@ a {
     text-align: center;
 }
 
-.header__list-item--selected {
-    background: linear-gradient(to bottom, #220033, #110022);
-    border: solid 1px #220044;
-    border-top: solid 1px #664488;
-    color: #eeeeee;
+.link-button--selected {
+    background: linear-gradient(to bottom, #203, #102);
+    border: solid 1px #204;
+    border-top: solid 1px #648;
+    color: #eee;
 }
 
-.header__link {
+.link-button__link {
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 0 0 1px #888888;
-    color: #ff1199;
+    text-shadow: 0 0 1px #888;
+    color: #f19;
     line-height: 34px;
 }
 
-.header__link--selected {
-    color: #eeeeee;
+.link-button__link--selected {
+    color: #eee;
 }
 
-.header__login {
-    margin: 0;
-    padding: 0;
-}
-
-.header__email {
-    padding: 0;
+.email-field {
     height: 33px;
     width: 132px;
-    position: relative;
-    left: 0;
-    outline: none;
     border: 1px solid #cdcdcd;
     padding: 0 5px;
     background: linear-gradient(to bottom, #dbc, #ddd, #dbc);
 }
 
-.header__email::placeholder {
+.email-field::placeholder {
     color: #111;
     font-style: italic;
     font-size: 12px;
 }
 
-.header__submit {
+.submit-button {
     width: 86px;
     height: 36px;
     cursor: pointer;
     text-transform: uppercase;
     color: #ddd;
-    background: linear-gradient(to bottom, #cc2233, #770022, #882233);
-    border: solid 1px #aa4444;
-    border-top: solid 2px #dd7777;
-    margin: 0 12px;
+    background: linear-gradient(to bottom, #c23, #702, #823);
+    border: solid 1px #a44;
+    border-top: solid 2px #d77;
 }
 
-.header__submit:hover {
+.submit-button:hover {
     background: linear-gradient(to bottom, #cc3, #772, #883);    
     border: solid 1px #aa4;
     border-top: solid 2px #dd7;
 }
 
-.header__submit:active {
+.submit-button:active {
     background: linear-gradient(to bottom, #2c3, #072, #283);    
     border: solid 1px #4a4;
     border-top: solid 2px #7d7;
+}
+
+.login-form__submit {    
+    margin: 0 12px;
 }
 
 .main {
@@ -109,13 +106,13 @@ a {
     margin: 0 auto;
 }
 
-.main__head {
+.main__album-info {
     max-width: 480px;
     min-width: 150px;
     margin: 0 0 0 40px;
 }
 
-.main__logo {
+.album-info__logo {
     background: url(./images/logo.png);
     width: 460px;
     height: 100px;
@@ -123,37 +120,36 @@ a {
     background-size: cover;
 }
 
-.main__description {
+.album-info__description {
     position: relative;
-    color: #cccccc;
-    height: auto;
-    max-width: 350px;
+    margin: 20px 0;
+}
+
+.description-block {
+    color: #ccc;
+    height: auto;max-width: 350px;
     min-width: 150px;
     line-height: 18px;
     padding: 0 0 0 130px;
     font-size: 12.5px;
-    margin: 20px 0;
 }
 
-.main__download-text {
-    color: #9922aa;
+.download-text {
+    color: #92a;
     font-size: 15px;
     font-style: italic;
-    letter-spacing: 0px;
 }
 
-.main__download-button {
+.download-button {
     height: 23px;
     width: 96px;
-    right: 20px;
-    position: absolute;
     border-radius: 4px;
-    border: 1px solid #1111bb;
-    border-bottom: 2px solid #333399;
-    border-top: 2px solid #8888ff;
-    background: linear-gradient(to bottom, #44f, #4433aa, #111188);
-    color: #eeeeee;
-    text-shadow: 0 2px 3px #111166, 0 0 2px #ffffff;
+    border: 1px solid #11b;
+    border-bottom: 2px solid #339;
+    border-top: 2px solid #88f;
+    background: linear-gradient(to bottom, #44f, #43a, #118);
+    color: #eee;
+    text-shadow: 0 2px 3px #116, 0 0 2px #fff;
     font-family: "consolas";
     font-size: 16px;
     font-weight: bold;
@@ -161,19 +157,29 @@ a {
     cursor: pointer;
 }
 
-.main__quote {
-    position: relative;
+.description-block__download-button {
+    right: 20px;
+    position: absolute;
+}
+
+.album-info__quote {
+    position: relative;    
+    margin-top: 90px;    
+}
+
+.quote-block {
     color: #88b;
-    font-size: 13px;
-    font-style: oblique;
     height: 180px;
-    margin-top: 90px;
     padding: 5px 16px;
+}
+
+.quote-text {
+    font-size: 13px;
+    font-style: oblique;    
     letter-spacing: -0.3px;
 }
 
-
-.main__quote-text::before {
+.quote-text::before {
     content: "\201C";
     font-family: Georgia, serif;
     font-size: 30px;
@@ -185,7 +191,7 @@ a {
     line-height: 20px;
 }
 
-.main__quote-text::after {
+.quote-text::after {
     content: "\201D";
     font-family: Georgia, serif;
     font-size: 30px;
@@ -197,10 +203,8 @@ a {
     line-height: 10px;
 }
 
-.main__text-author {
-    font-style: normal;
-    position: relative;
-    width: inherit;
+.quote-block__author {
+    font-size: 13px;
     text-align: right;
 }
 
@@ -214,15 +218,15 @@ a {
     justify-content: space-between;
 }
 
-.body__content {
+.body-content__content {
     width: 500px;
 }
 
-.body__side-bar {
+.body-content__side-bar {
     width: 340px;
 }
 
-.body__video {
+.video-player {
     width: 500px;
     height: 280px;
     border: solid 1px #206;
@@ -230,46 +234,32 @@ a {
     background-size: cover;
 }
 
-.body__text {
+.body-content__paragraph {
+    margin: 26px 0;
     color: #767;
     line-height: 24px;
 }
 
-.body__paragraph {
-    margin: 26px 0;
-}
-
-.body__list {
+.side-bar__list {
     margin: 0 0 36px 0;
     padding: 0;
 }
 
-.body__shows {
+.side-bar__item {
+    margin: 12px 0 0 0;
+}
+
+.list-item {
     width: inherit;
     height: auto;
-    margin: 12px 0 0 0;
     list-style: none;
     padding: 0 0 0 14px;
-    font-size: 14px;
     background: #213;
     color: #568;
     line-height: 48px;
 }
 
-.body__shows--child {
-    cursor: pointer;
-    transition: margin 1s;
-}
-
-.body__shows--child:hover {
-    margin: 12px 0 0 10px;
-}
-
-.body__shows > b {
-    font-size: 16px;
-}
-
-.body__shows--main {
+.list-item--main {
     margin: 0;
     background: #767;
     color: #eee;
@@ -278,20 +268,29 @@ a {
     font-weight: normal !important;
     font-size: 25px;
     letter-spacing: 0.2em;
-    line-height: 48px;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
+    text-shadow: 0 0 2px #ddd;
 }
 
-.body__shows--image {
+.list-item--child {
+    cursor: pointer;
+    transition: margin 1s;
+    font-size: 14px;
+}
+
+.list-item--child:hover {
+    margin: 12px 0 0 10px;
+}
+
+.list-item > b {
+    font-size: 16px;
+}
+
+.list-item--image {
     margin: 0;
     padding: 1px 14px;
-}
-
-.body__shows-title {
-    display: inline-block;
-    text-shadow: 0 0 2px #ddd;
 }
 
 .body__album-icon {
@@ -307,6 +306,7 @@ a {
 
 .body__album-info {
     bottom: 0;
+    font-size: 14px;
 }
 
 .body__sociallink {
@@ -329,7 +329,6 @@ a {
 
 .footer {
     margin: 20px 0 150px 0;
-    min-width: 600px;
 }
 
 .footer__content {
@@ -338,7 +337,6 @@ a {
     text-align: center;
     padding: 10px 0px;
     max-width: 940px;
-    min-height: 10px;
     color: #878;
     font-size: 10px;
 }
@@ -374,7 +372,7 @@ a {
 }
 
 @supports (caret-color: red) {
-    .header__email {
+    .email-field {
         caret-color: red;
     }
 }

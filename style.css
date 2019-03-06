@@ -112,6 +112,10 @@ a {
     margin: 0 0 0 40px;
 }
 
+.album-info {
+    font-size: 14px;
+}
+
 .album-info__logo {
     background: url(./images/logo.png);
     width: 460px;
@@ -240,18 +244,16 @@ a {
     line-height: 24px;
 }
 
-.additional-description__list {
+.additional-description__container {
     margin: 0 0 36px 0;
     padding: 0;
 }
 
-.info-box__header {
+.container-header {
     width: inherit;
     height: auto;
-    list-style: none;
     padding: 0 0 0 14px;
     line-height: 48px;
-    margin: 0;
     background: #776677;
     color: #eeeeee;
     letter-spacing: 0.2em;
@@ -263,33 +265,40 @@ a {
     font-size: 25px;
 }
 
-.additional-description__item {
-    margin: 12px 0 0 0;
-}
-
-.list-item {
-    width: inherit;
-    height: auto;
+.container-list {
     list-style: none;
+    padding: 0;
+}
+
+.container-list__item {
+    margin: 12px 0 0 0;
     padding: 0 0 0 14px;
-    background: #221133;
-    color: #556688;
-    line-height: 48px;
-}
-
-.info-box__header--type--icons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.list-item--type--child {
     cursor: pointer;
     transition: margin 1s;
     font-size: 14px;
 }
 
-.list-item--type--child:hover {
+.container-list__item:hover {
     margin: 12px 0 0 10px;
+}
+
+.list-item,
+.image-container {
+    width: inherit;
+    height: auto;
+    background: #221133;
+    color: #556688;
+    line-height: 48px;
+}
+
+.list-item {
+    list-style: none;
+    padding: 0 0 0 14px;    
+}
+
+.description-container__header--type--icons {
+    display: flex;
+    justify-content: space-between;
 }
 
 .list-item__bold_text {
@@ -297,9 +306,17 @@ a {
     font-weight: bold;
 }
 
-.list-item--type--image {
+.image-container {
     margin: 0;
     padding: 1px 14px;
+    cursor: pointer;
+    transition: margin 1s;
+    font-size: 14px;
+}
+
+.image-container__icon {
+    display: block;
+    margin: 14px auto;
 }
 
 .album-icon {
@@ -315,15 +332,6 @@ a {
     background: url(http://img.scrolls.combats.com/ph/1245562717/src/V5UGsPKzkd3UFlb7tdB3g8t35yPsaBIb9Jnb6Lonckw.gif) no-repeat;
     background-size: contain;
     height: 150px;
-}
-
-.list-item__icon {
-    display: block;
-    margin: 14px auto;
-}
-
-.album-info {
-    font-size: 14px;
 }
 
 .social-link-icons__icon {

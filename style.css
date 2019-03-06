@@ -209,7 +209,7 @@ a {
     font-size: 13px;
 }
 
-.page-content__body {
+.page-content__album-description {
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -218,15 +218,15 @@ a {
     overflow: hidden;
 }
 
-.body-content__content {
+.album-description__main-description {
     width: 500px;
 }
 
-.body-content__side-bar {
+.album-description__additional-description {
     width: 340px;
 }
 
-.video-player {
+.album-trailer {
     width: 500px;
     height: 280px;
     border: solid 1px #220066;
@@ -234,18 +234,36 @@ a {
     background-size: cover;
 }
 
-.body-content__paragraph {
+.album-description__paragraph {
     margin: 26px 0;
     color: #776677;
     line-height: 24px;
 }
 
-.side-bar__list {
+.additional-description__list {
     margin: 0 0 36px 0;
     padding: 0;
 }
 
-.side-bar__item {
+.info-box__header {
+    width: inherit;
+    height: auto;
+    list-style: none;
+    padding: 0 0 0 14px;
+    line-height: 48px;
+    margin: 0;
+    background: #776677;
+    color: #eeeeee;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px #dddddd;
+    font-family: "NixieOne-Regular";
+    font-style: italic;
+    font-weight: normal !important;
+    font-size: 25px;
+}
+
+.additional-description__item {
     margin: 12px 0 0 0;
 }
 
@@ -259,31 +277,18 @@ a {
     line-height: 48px;
 }
 
-.list-item--main {
-    margin: 0;
-    background: #776677;
-    color: #eeeeee;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-shadow: 0 0 2px #dddddd;
-    font-family: "NixieOne-Regular";
-    font-style: italic;
-    font-weight: normal !important;
-    font-size: 25px;
-}
-
-.list-item--icons {
+.info-box__header--type--icons {
     display: flex;
     justify-content: space-between;
 }
 
-.list-item--child {
+.list-item--type--child {
     cursor: pointer;
     transition: margin 1s;
     font-size: 14px;
 }
 
-.list-item--child:hover {
+.list-item--type--child:hover {
     margin: 12px 0 0 10px;
 }
 
@@ -292,7 +297,7 @@ a {
     font-weight: bold;
 }
 
-.list-item--image {
+.list-item--type--image {
     margin: 0;
     padding: 1px 14px;
 }
@@ -321,7 +326,7 @@ a {
     font-size: 14px;
 }
 
-.sociallink__icon {
+.social-link-icons__icon {
     margin: 8px 16px 0 0;
 }
 
@@ -369,11 +374,11 @@ a {
         margin: 15px 0;
     }
 
-    .page-content__body {
+    .page-content__album-description {
         flex-direction: column;
     }
 
-    .side-bar {
+    .additional-description {
         width: 500px;
     }
 }
